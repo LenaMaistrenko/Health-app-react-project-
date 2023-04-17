@@ -1,4 +1,3 @@
-
 import React, { useEffect, useMemo } from 'react';
 import { VscAdd } from 'react-icons/vsc';
 import { useState } from 'react';
@@ -56,8 +55,6 @@ export default function DiaryAddProductForm({
   //   }
   // }, [product]);
 
-
-
   const getProducts = useMemo(
     () =>
       debounce(query => {
@@ -104,7 +101,9 @@ export default function DiaryAddProductForm({
       .unwrap()
       .then(() => {
         dispatch(fetchCurrentUser());
-        if(width < 768 && isInModal) { onClose();}
+        if (width < 768 && isInModal) {
+          onClose();
+        }
         dispatch(userDayInfoOperation({ date }));
       });
     reset();
@@ -176,22 +175,25 @@ export default function DiaryAddProductForm({
                 onChange={handleChangeProduct}
               />
 
-              {products?.map(({ _id, title }) => (
-                <button
-                  // className={css.inputProductTwo}
-                  type="button"
-                  key={_id}
-                  value={_id}
-                  style={{ display: 'block' }}
-                  onClick={() => {
-                    setProductId(_id);
-                    setProduct(title.ua);
-                    setProducts([]);
-                  }}
-                >
-                  {title.ua}
-                </button>
-              ))}
+              {products?.map(
+                ({ _id, title }) =>
+                  title.ua.length < 30 && (
+                    <button
+                      // className={css.inputProductTwo}
+                      type="button"
+                      key={_id}
+                      value={_id}
+                      style={{ display: 'block' }}
+                      onClick={() => {
+                        setProductId(_id);
+                        setProduct(title.ua);
+                        setProducts([]);
+                      }}
+                    >
+                      {title.ua}
+                    </button>
+                  )
+              )}
             </label>
             <label label="Grams">
               <input
