@@ -8,4 +8,4 @@ Technology stack: React, Redux Toolkit, HTML, SASS, JavaScript, Adaptive/Respons
 
 How to use:
 
-Go to the live page https://aniyavolfman.github.io/health-app-project/
+Go to the live page[ https://aniyavolfman.github.io/health-app-project/](https://lenamaistrenko.github.io/health-app-project)
