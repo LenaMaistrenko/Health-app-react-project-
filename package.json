@@ -2,7 +2,7 @@
   "name": "health-app-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "hhttps://github.com/LenaMaistrenko/health-app-project",
+  "homepage": "https://LenaMaistrenko.github.io/health-app-project",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
